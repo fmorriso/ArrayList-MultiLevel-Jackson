@@ -7,12 +7,17 @@ public class Main {
 
         Course c1 = new Course("Java", "Java Programming");
         System.out.format("%s\n", c1);
+
         // convert to JSON
         String c1JSON = persistenceHandler.getJsonFromPOJO(c1);
         System.out.format("Course (JSON): %s%n", c1JSON);
-        // use the JSON to convert back to a POJO:
-        Course c1POJO = (Course) persistenceHandler.getPOJOfromJson(c1JSON, Course.class);
+
+        // use the JSON string to convert back to a POJO:
+        Course c1POJO = persistenceHandler.getPOJOfromJson(c1JSON, Course.class);
         System.out.format("Course (POJO from JSON): %s%n", c1POJO);
+
+        // verify that the original POJO and rehydrated one are equal
+        assert c1POJO.equals(c1);
 
         Department d1 = new Department("Computer Science", "Computer Science & Cryptography");
         System.out.format("%s\n", d1);

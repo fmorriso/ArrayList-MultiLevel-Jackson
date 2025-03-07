@@ -36,7 +36,7 @@ public class PersistenceHandler {
      * @param <T> - The type of object to be returned, typically Object which caller casts to desired class.
      * @return - a POJO instance of class T
      */
-    public <T> Object getPOJOfromJson(String json, Class<T> classz)  {
+    public <T> T getPOJOfromJson(String json, Class<T> classz)  {
         try {
             return objectMapper.readValue(json, classz);
         } catch (JsonProcessingException e) {
