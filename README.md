@@ -19,14 +19,7 @@ you'll need a way to pull up a unique set of courses taught by the school from a
 if multiple departments can teach the same course to avoid the resulting list
 containing duplicate courses.
 
-Another issue left up to you is the matter of persistence.
-You may wish to look into Google's GSON as a way of transforming
-Plain Old Java Objects (POJO's) into a form that can be persisted, perhaps
-to a MongoDB Atlas cloud database with collections for each entity (Course, 
-Department, Teacher, Student, School, District and State). If you want to look at an example of persisting (dehydrating) POJO's as text files in the local file system 
-and reading that text file back in (rehydrating) to a POJO,
-take a look at my [POJO to JSON persistence example](https://github.com/fmorriso/json-simple-example)
-
+This project uses the Jackson library to persist Java POJO's to from JSON.
 
 ## Tools Used
 
