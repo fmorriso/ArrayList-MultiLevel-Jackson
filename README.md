@@ -30,17 +30,19 @@ take a look at my [POJO to JSON persistence example](https://github.com/fmorriso
 
 ## Tools Used
 
-| Tool     |    Version |
-|:---------|-----------:|
-| Java     |   23.0.2.0 |
-| IntelliJ | 2024.3.4.1 |
-| VSCode   |     1.98.0 |
+| Tool         |    Version |
+|:-------------|-----------:|
+| Java         |   23.0.2.0 |
+| IntelliJ     | 2024.3.4.1 |
+| VSCode       |     1.98.0 |
+| Jackson      | 2.18.3 |
+| MongoDB JARs | 5.1.3 |
 
 ## Change History
 
-| Date       | Description      |
-|:-----------|:-----------------|
-| 2025-03-06 | Initial creation |
+| Date       | Description                                                                 |
+|:-----------|:----------------------------------------------------------------------------|
+| 2025-03-07 | Initial creation by coping parts of ArrayList Multilevel and adding Jackson |
 
 ## References
 

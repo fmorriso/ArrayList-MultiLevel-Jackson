@@ -1,10 +1,30 @@
 import java.util.Collections;
+//
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class Main {
     public static void main(String[] args) {
 
+        ObjectMapper objectMapper = new ObjectMapper();
+        // Register the Java 8 Date/Time module to handle ZonedDateTime
+        JavaTimeModule javaTimeModule = new JavaTimeModule();
+        objectMapper.registerModule(javaTimeModule);
+        // Enable pretty-printing if desired
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
         Course c1 = new Course("Java", "Java Programming");
         System.out.format("%s\n", c1);
+
+        try {
+            String c1Json = objectMapper.writeValueAsString(c1);
+            System.out.format("Course as JSON: %s\n", c1Json);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } finally {
+        }
 
         Department d1 = new Department("Computer Science", "Computer Science & Cryptography");
         System.out.format("%s\n", d1);

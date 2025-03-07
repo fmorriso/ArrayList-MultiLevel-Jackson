@@ -1,4 +1,10 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Course {
+
+    @JsonProperty("_id")
+    private String id;
+
     private String name;
     private String description;
 
