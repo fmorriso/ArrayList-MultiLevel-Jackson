@@ -31,7 +31,7 @@ public class PersistenceHandler {
     }
 
     /** Rehydrate a POJO from a JSON string representation of an instance of that POJO.
-     * @param json - String containing a JSON represenation of a POJO.
+     * @param json - String containing a JSON representation of a POJO.
      * @param classz - the class of the POJO, such as Course.class
      * @param <T> - The type of object to be returned, typically Object which caller casts to desired class.
      * @return - a POJO instance of class T
