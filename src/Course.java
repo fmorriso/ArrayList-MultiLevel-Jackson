@@ -14,13 +14,15 @@ public class Course {
         this.description = description;
     }
 
+    public String getId() {return id;}
     public String getName() {return name;}
     public String getDescription() {return description;}
 
     @Override
     public String toString() {
         return new StringBuilder("Course{")
-                .append("name='").append(name).append('\'')
+                .append("id=").append(id).append('\'')
+                .append(", name='").append(name).append('\'')
                 .append(", description='").append(description).append('\'')
                 .append('}').toString();
     }

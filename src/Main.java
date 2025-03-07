@@ -7,7 +7,12 @@ public class Main {
 
         Course c1 = new Course("Java", "Java Programming");
         System.out.format("%s\n", c1);
-        System.out.format("Course (JSON): %s%n", persistenceHandler.getJsonFromPOJO(c1));
+        // convert to JSON
+        String c1JSON = persistenceHandler.getJsonFromPOJO(c1);
+        System.out.format("Course (JSON): %s%n", c1JSON);
+        // use the JSON to convert back to a POJO:
+        Course c1POJO = (Course) persistenceHandler.getPOJOfromJson(c1JSON, Course.class);
+        System.out.format("Course (POJO from JSON): %s%n", c1POJO);
 
         Department d1 = new Department("Computer Science", "Computer Science & Cryptography");
         System.out.format("%s\n", d1);
