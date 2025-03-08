@@ -1,5 +1,6 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.bson.types.ObjectId;
 /**
  * A class intended to be persisted to/from JSON and eventually a MongoDB Atlas collection.
@@ -13,7 +14,8 @@ public class POJO {
      * Atlas collection.
      */
     @JsonProperty(value = "_id", required = true, index = 1)
-    @JsonDeserialize(using = MongoDbIdSerializer.class)
+    @JsonDeserialize(using = MongoDbIdDeserializer.class)
+    @JsonSerialize(using = MongoDbIdSerializer.class)
     protected ObjectId id; // allow MongoDB to set this when inserting new records
 
     public ObjectId getId() {return id;}

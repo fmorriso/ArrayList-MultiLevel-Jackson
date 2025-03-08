@@ -6,7 +6,9 @@ public class Main {
         PersistenceHandler persistenceHandler = new PersistenceHandler();
 
         Course c1 = new Course("Java", "Java Programming");
-        System.out.format("%s\n", c1);
+        System.out.format("before ensureId(): %s%n", c1);
+        c1.ensureId();
+        System.out.format("after ensureId(): %s%n", c1);
 
         // convert to JSON
         String c1JSON = persistenceHandler.getJsonFromPOJO(c1);
