@@ -11,8 +11,8 @@ public class POJO {
      * @implNote - the value will be null unless the information came from an existing record in a MongoDB
      * Atlas collection.
      */
-    @JsonProperty(value = "_id", required = true)
-    protected String id;
+    @JsonProperty(value = "_id", required = true, defaultValue = "?")
+    protected String id = "?";
 
     public String getId() {return id;}
     public void setId(String id) {this.id = id;}
