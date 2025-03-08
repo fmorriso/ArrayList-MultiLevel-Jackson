@@ -35,6 +35,14 @@ public class PersistenceHandler {
      * @param classz - the class of the POJO, such as Course.class
      * @param <T> - The type of object to be returned, typically Object which caller casts to desired class.
      * @return - a POJO instance of class T
+     * @implNote
+     * Example usage:
+     * {@code
+     * Course c1 = new Course("Java", "Java Programming");
+     * String c1JSON = persistenceHandler.getJsonFromPOJO(c1);
+     * Course c1POJO = persistenceHandler.getPOJOfromJson(c1JSON, Course.class);
+     * assert c1POJO.equals(c1);
+     * }
      */
     public <T> T getPOJOfromJson(String json, Class<T> classz)  {
         try {
