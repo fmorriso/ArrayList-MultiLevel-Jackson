@@ -3,8 +3,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-import java.lang.reflect.InvocationTargetException;
-
 public class PersistenceHandler {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
