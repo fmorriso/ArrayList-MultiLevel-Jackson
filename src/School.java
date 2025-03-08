@@ -20,7 +20,7 @@ public class School extends POJO {
     private School() {/* prevent uninitialized instances */}
 
     public School(String name, String abbreviation, String street, String city) {
-        this.id = new ObjectId();
+        ensureId();
         this.name = name;
         this.abbreviation = abbreviation;
         this.street = street;

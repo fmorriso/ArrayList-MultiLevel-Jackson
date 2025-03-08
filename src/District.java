@@ -16,7 +16,7 @@ public class District extends POJO {
     private District() {/* prevent uninitialized instances */}
 
     public District(String name, String abbreviation, String street, String city) {
-        this.id = new ObjectId();
+        ensureId();
         this.name = name;
         this.abbreviation = abbreviation;
         this.street = street;

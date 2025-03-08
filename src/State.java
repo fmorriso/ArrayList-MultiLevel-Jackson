@@ -15,7 +15,7 @@ public class State extends POJO {
     private State() {/* prevent uninitialized instances */}
 
     public State(String name, String abbreviation) {
-        this.id = new ObjectId();
+        ensureId();
         this.name = name;
         this.abbreviation = abbreviation;
     }

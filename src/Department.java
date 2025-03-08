@@ -13,7 +13,7 @@ public class Department  extends POJO {
 
     private Department() {/* prevent uninitialized instances */}
     public Department(String name, String description) {
-        this.id = new ObjectId();
+        ensureId();
         this.name = name;
         this.description = description;
     }

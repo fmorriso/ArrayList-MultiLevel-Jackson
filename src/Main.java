@@ -14,6 +14,7 @@ public class Main {
 
         // use the JSON string to convert back to a POJO:
         Course c1POJO = persistenceHandler.getPOJOfromJson(c1JSON, Course.class);
+        c1POJO.ensureId();
         System.out.format("Course (POJO from JSON): %s%n", c1POJO);
 
         // verify that the original POJO and rehydrated one are equal

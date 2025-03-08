@@ -16,7 +16,7 @@ public class Teacher extends Person {
 
     private Teacher() {/* prevent uninitialized instances */}
     public Teacher(String firstName, String lastName) {
-        this.id = new ObjectId();
+        ensureId();
         this.firstName = firstName;
         this.lastName = lastName;
     }
