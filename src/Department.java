@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -12,6 +13,7 @@ public class Department  extends POJO {
 
     private Department() {/* prevent uninitialized instances */}
     public Department(String name, String description) {
+        this.id = new ObjectId();
         this.name = name;
         this.description = description;
     }

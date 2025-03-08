@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -14,6 +15,7 @@ public class State extends POJO {
     private State() {/* prevent uninitialized instances */}
 
     public State(String name, String abbreviation) {
+        this.id = new ObjectId();
         this.name = name;
         this.abbreviation = abbreviation;
     }

@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class Student extends Person {
 
     private Student() {/* prevent uninitialized instances */}
     public Student(String firstName, String lastName, int gradeLevel) {
+        this.id = new ObjectId();
         this.firstName = firstName;
         this.lastName = lastName;
         this.gradeLevel = gradeLevel;

@@ -1,3 +1,5 @@
+import org.bson.types.ObjectId;
+
 import java.util.Objects;
 
 public class Course extends POJO {
@@ -7,6 +9,7 @@ public class Course extends POJO {
 
     private Course() {/* prevent uninitialized instances */}
     public Course(String name, String description) {
+        ensureId();
         this.name = name;
         this.description = description;
     }

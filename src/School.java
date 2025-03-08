@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class School extends POJO {
     private School() {/* prevent uninitialized instances */}
 
     public School(String name, String abbreviation, String street, String city) {
+        this.id = new ObjectId();
         this.name = name;
         this.abbreviation = abbreviation;
         this.street = street;
