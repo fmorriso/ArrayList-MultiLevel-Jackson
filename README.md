@@ -47,4 +47,5 @@ This project uses the Jackson library to persist Java POJO's to from JSON.
 ## References
 
 * [POJO to JSON persistence example](https://github.com/fmorriso/json-simple-example)
+* [Jackson Library Documentation and Tutorials](https://github.com/FasterXML/jackson-docs)
 
