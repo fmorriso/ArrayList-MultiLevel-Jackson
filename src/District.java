@@ -1,3 +1,5 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -23,6 +25,8 @@ public class District extends POJO {
     public String getAbbreviation() {return abbreviation;}
     public String getStreet() {return street;}
     public String getCity() {return city;}
+
+    @JsonProperty(required = false)
     public List<School> getSchools() { return schools; }
 
     public void addSchool(School school) {

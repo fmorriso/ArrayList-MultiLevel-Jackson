@@ -1,3 +1,5 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -5,6 +7,8 @@ public class State extends POJO {
 
     private String name;
     private String abbreviation;
+
+    @JsonProperty(required = false)
     private ArrayList<District> schoolDistricts = new ArrayList<District>();
 
     private State() {/* prevent uninitialized instances */}

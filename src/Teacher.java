@@ -1,11 +1,16 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Teacher extends Person {
 
+    @JsonProperty(required = false)
     private Department department;
+
     // courses taught by this teacher
+    @JsonProperty(required = false)
     private List<Course> courses = new ArrayList<>(); // courses taught
 
     private Teacher() {/* prevent uninitialized instances */}
@@ -16,7 +21,6 @@ public class Teacher extends Person {
 
     public Department getDepartment() { return department; }
     public void setDepartment(Department department) { this.department = department; }
-
     public List<Course> getCourses() { return courses;}
 
     @Override

@@ -1,3 +1,5 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -5,7 +7,9 @@ import java.util.Objects;
 public class Student extends Person {
 
     private int gradeLevel;
+
     // courses this student is taking
+    @JsonProperty(required = false)
     private List<Course> courses = new ArrayList<Course>();
 
     private Student() {/* prevent uninitialized instances */}

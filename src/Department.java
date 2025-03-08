@@ -1,9 +1,13 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class Department  extends POJO {
     private String name;
     private String description;
+
+    @JsonProperty(required = false)
     private ArrayList<Course> courses = new ArrayList<Course>();
 
     private Department() {/* prevent uninitialized instances */}
