@@ -21,8 +21,16 @@ public class Main {
 
         Department d1 = new Department("Computer Science", "Computer Science & Cryptography");
         System.out.format("%s\n", d1);
-        System.out.format("Department (JSON): %s%n", persistenceHandler.getJsonFromPOJO(d1));
+        String d1JSON = persistenceHandler.getJsonFromPOJO(d1);
+        System.out.format("Department (JSON): %s%n", d1JSON);
         d1.addCourse(c1);
+
+        // use the JSON string to convert back to a POJO:
+        Department d1POJO = persistenceHandler.getPOJOfromJson(d1JSON, Department.class);
+        System.out.format("Department (POJO from JSON): %s%n", d1POJO);
+
+        // verify that the original POJO and rehydrated one are equal
+        assert d1POJO.equals(d1);
 
         Student s1 = new Student("Mythical", "Last-Name", 12);
         System.out.format("%s\n", s1);
