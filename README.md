@@ -36,7 +36,7 @@ This project uses the Jackson library to persist Java POJO's to from JSON.
 | Java         |   23.0.2.0 |
 | IntelliJ     | 2024.3.4.1 |
 | VSCode       |     1.98.0 |
-| Jackson      |     2.18.3 |
+| Jackson JARs |     2.18.3 |
 | MongoDB JARs |      5.1.3 |
 
 ## Change History
