@@ -46,6 +46,6 @@ public class Department  extends POJO {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, description);
+        return Objects.hash(id, name, description);
     }
 }

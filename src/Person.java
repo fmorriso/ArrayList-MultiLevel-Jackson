@@ -17,7 +17,7 @@ public class Person extends POJO {
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName);
+        return Objects.hash(id, firstName, lastName);
     }
 
     public String getFirstName() {return firstName;}

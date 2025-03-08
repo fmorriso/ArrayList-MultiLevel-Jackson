@@ -51,7 +51,7 @@ public class District extends POJO {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, abbreviation, street, city);
+        return Objects.hash(id, name, abbreviation, street, city);
     }
 
     @Override

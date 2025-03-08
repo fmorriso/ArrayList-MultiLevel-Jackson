@@ -46,6 +46,6 @@ public class State extends POJO {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, abbreviation);
+        return Objects.hash(id, name, abbreviation);
     }
 }
