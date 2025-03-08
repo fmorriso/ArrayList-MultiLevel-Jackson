@@ -16,7 +16,7 @@ NOTES:
 <em><b>Not every possible scenario is provided in this example.
 You are encouraged to further modify this code to suit your needs</b></em>
 
-This example is similar to the [original project](https://github.com/fmorriso/Java-ArrayList-Multilevel) 
+This example is similar to the [original project](https://github.com/fmorriso/Java-ArrayList-Multilevel)
 with the added feature of being able to dehydrate a POJO into a JSON string and hydrate an instance of a POJO using
 a JSON string representation of that POJO.
 
@@ -41,9 +41,10 @@ This project uses the Jackson library to persist Java POJO's to from JSON.
 
 ## Change History
 
-| Date       | Description                                                                 |
-|:-----------|:----------------------------------------------------------------------------|
-| 2025-03-07 | Initial creation by coping parts of ArrayList Multilevel and adding Jackson |
+| Date       | Description                                                                            |
+|:-----------|:---------------------------------------------------------------------------------------|
+| 2025-03-07 | Initial creation by coping parts of ArrayList Multilevel and adding Jackson            |
+| 2025-03-08 | Add quick true exit in equals() when the two objects point to the same memory address. |
 
 ## References
 
