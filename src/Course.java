@@ -21,6 +21,8 @@ public class Course extends POJO {
      */
     @Override
     public boolean equals(Object o) {
+        // same memory address is easy
+        if (this == o) return true;
         // if you're not one of us, go away.
         if (!(o instanceof Course course)) return false;
         // check everything except _id for equality.

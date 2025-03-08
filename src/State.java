@@ -36,6 +36,9 @@ public class State extends POJO {
 
     @Override
     public boolean equals(Object o) {
+        // same memory address is easy
+        if (this == o) return true;
+        // if you're not one of us, go away.
         if (!(o instanceof State state)) return false;
         return Objects.equals(name, state.name)
                 && Objects.equals(abbreviation, state.abbreviation);

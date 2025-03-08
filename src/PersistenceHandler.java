@@ -17,6 +17,7 @@ public class PersistenceHandler {
     }
 
     /** Return a JSON string representation of the specified POJO instance.
+     * Also known as "dehydrate" a POJO into a JSON string.
      * @param pojo - an instance of a class to be serialized into a JSON string
      * @return - string containing a JSON representation of the POJO instance.
      */

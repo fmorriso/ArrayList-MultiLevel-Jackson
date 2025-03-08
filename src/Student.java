@@ -37,6 +37,9 @@ public class Student extends Person {
 
     @Override
     public boolean equals(Object o) {
+        // same memory address is easy
+        if (this == o) return true;
+        // if you're not one of us, go away.
         if (!(o instanceof Student student)) return false;
         if (!super.equals(o)) return false;
         return gradeLevel == student.gradeLevel;

@@ -93,6 +93,9 @@ public class School extends POJO {
 
     @Override
     public boolean equals(Object o) {
+        // same memory address is easy
+        if (this == o) return true;
+        // if you're not one of us, go away.
         if (!(o instanceof School school)) return false;
         return Objects.equals(name, school.name)
                 && Objects.equals(abbreviation, school.abbreviation)

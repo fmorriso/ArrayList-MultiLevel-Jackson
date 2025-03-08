@@ -36,6 +36,9 @@ public class Department  extends POJO {
      */
     @Override
     public boolean equals(Object o) {
+        // same memory address is easy
+        if (this == o) return true;
+        // if you're not one of us, go away.
         if (!(o instanceof Department that)) return false;
         return Objects.equals(name, that.name)
                 && Objects.equals(description, that.description);
