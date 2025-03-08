@@ -1,7 +1,21 @@
-public abstract class Person {
+import java.util.Objects;
+
+public class Person extends POJO {
 
     protected String firstName;
     protected String lastName;
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Person person)) return false;
+        return Objects.equals(firstName, person.firstName)
+                && Objects.equals(lastName, person.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName);
+    }
 
     public String getFirstName() {return firstName;}
     public String getLastName() {return lastName;}

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
-public class State {
+public class State extends POJO {
 
     private String name;
     private String abbreviation;
@@ -27,5 +28,17 @@ public class State {
                 .append("name='").append(name).append('\'')
                 .append(", abbreviation='").append(abbreviation).append('\'')
                 .append('}').toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof State state)) return false;
+        return Objects.equals(name, state.name)
+                && Objects.equals(abbreviation, state.abbreviation);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, abbreviation);
     }
 }

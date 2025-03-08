@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Student extends Person {
 
@@ -30,4 +31,15 @@ public class Student extends Person {
         courses.add(course);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Student student)) return false;
+        if (!super.equals(o)) return false;
+        return gradeLevel == student.gradeLevel;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), gradeLevel);
+    }
 }

@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class District {
+public class District extends POJO {
     private String name;
     private String abbreviation;
     private String street;
@@ -24,12 +25,27 @@ public class District {
     public String getCity() {return city;}
     public List<School> getSchools() { return schools; }
 
-
-
     public void addSchool(School school) {
         schools.add(school);
     }
 
+    /** Check to see if two instances of this class differ only by their underlying MongoDB _id field and schools.
+     * @param o - an instance of this class.
+     * @return - true if the objects are equal; otherwise, return false.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof District district)) return false;
+        return Objects.equals(name, district.name)
+                && Objects.equals(abbreviation, district.abbreviation)
+                && Objects.equals(street, district.street)
+                && Objects.equals(city, district.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, abbreviation, street, city);
+    }
 
     @Override
     public String toString() {

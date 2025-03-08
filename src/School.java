@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class School {
+public class School extends POJO {
+
     private String name;
     private String abbreviation;
     private String street;
@@ -80,4 +82,17 @@ public class School {
         System.out.println(sbr.toString());
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof School school)) return false;
+        return Objects.equals(name, school.name)
+                && Objects.equals(abbreviation, school.abbreviation)
+                && Objects.equals(street, school.street)
+                && Objects.equals(city, school.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, abbreviation, street, city);
+    }
 }
