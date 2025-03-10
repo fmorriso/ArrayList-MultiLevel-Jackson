@@ -45,6 +45,7 @@ This project uses the Jackson library to persist Java POJO's to from JSON.
 |:-----------|:---------------------------------------------------------------------------------------|
 | 2025-03-07 | Initial creation by coping parts of ArrayList Multilevel and adding Jackson            |
 | 2025-03-08 | Add quick true exit in equals() when the two objects point to the same memory address. |
+| 2025-03-10 | make sure equals() checks id and exact same memory addresses                           |
 
 ## References
 

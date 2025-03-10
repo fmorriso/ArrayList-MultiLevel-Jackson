@@ -28,6 +28,7 @@ public class Course extends POJO {
         if (this == o) return true;
         // if you're not one of us, go away.
         if (!(o instanceof Course course)) return false;
+        if (!super.equals(o)) return false;
         // check everything except _id for equality.
         return Objects.equals(name, course.name)
             && Objects.equals(description, course.description);

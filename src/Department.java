@@ -42,6 +42,7 @@ public class Department  extends POJO {
         if (this == o) return true;
         // if you're not one of us, go away.
         if (!(o instanceof Department that)) return false;
+        if (!super.equals(o)) return false;
         return Objects.equals(name, that.name)
                 && Objects.equals(description, that.description);
     }

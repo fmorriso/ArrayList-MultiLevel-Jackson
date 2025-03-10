@@ -42,6 +42,7 @@ public class State extends POJO {
         if (this == o) return true;
         // if you're not one of us, go away.
         if (!(o instanceof State state)) return false;
+        if (!super.equals(o)) return false;
         return Objects.equals(name, state.name)
                 && Objects.equals(abbreviation, state.abbreviation);
     }

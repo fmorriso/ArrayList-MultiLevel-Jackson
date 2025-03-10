@@ -45,6 +45,7 @@ public class District extends POJO {
         if (this == o) return true;
         // if you're not one of us, go away.
         if (!(o instanceof District district)) return false;
+        if (!super.equals(o)) return false;
         return Objects.equals(name, district.name)
                 && Objects.equals(abbreviation, district.abbreviation)
                 && Objects.equals(street, district.street)
@@ -84,7 +85,5 @@ public class District extends POJO {
         }
         System.out.println(sbr.toString());
     }
-
-
 
 }

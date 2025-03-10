@@ -97,8 +97,8 @@ public class School extends POJO {
     public boolean equals(Object o) {
         // same memory address is easy
         if (this == o) return true;
-        // if you're not one of us, go away.
         if (!(o instanceof School school)) return false;
+        if (!super.equals(o)) return false;
         return Objects.equals(name, school.name)
                 && Objects.equals(abbreviation, school.abbreviation)
                 && Objects.equals(street, school.street)
@@ -107,6 +107,6 @@ public class School extends POJO {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, abbreviation, street, city);
+        return Objects.hash(super.hashCode(), name, abbreviation, street, city);
     }
 }

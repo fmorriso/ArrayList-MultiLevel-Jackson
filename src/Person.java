@@ -9,15 +9,14 @@ public class Person extends POJO {
     public boolean equals(Object o) {
         // same memory address is easy
         if (this == o) return true;
-        // if you're not one of us, go away.
         if (!(o instanceof Person person)) return false;
-        return Objects.equals(firstName, person.firstName)
-                && Objects.equals(lastName, person.lastName);
+        if (!super.equals(o)) return false;
+        return Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName);
+        return Objects.hash(super.hashCode(), firstName, lastName);
     }
 
     public String getFirstName() {return firstName;}
