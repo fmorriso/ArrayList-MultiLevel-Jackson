@@ -31,13 +31,14 @@ This project uses the Jackson library to persist Java POJO's to from JSON.
 
 ## Tools Used
 
-| Tool         |    Version |
-|:-------------|-----------:|
-| Java         |   23.0.2.0 |
-| IntelliJ     | 2024.3.4.1 |
-| VSCode       |     1.98.0 |
-| Jackson JARs |     2.18.3 |
-| MongoDB JARs |      5.1.3 |
+| Tool               |    Version |
+|:-------------------|-----------:|
+| Java               |   23.0.2.0 |
+| IntelliJ           | 2024.3.4.1 |
+| VSCode             |     1.98.0 |
+| Jackson JARs       |     2.18.3 |
+| MongoDB JARs       |      5.1.3 |
+| Google Guava Cache |     33.4.0 |
 
 ## Change History
 
@@ -51,4 +52,14 @@ This project uses the Jackson library to persist Java POJO's to from JSON.
 
 * [POJO to JSON persistence example](https://github.com/fmorriso/json-simple-example)
 * [Jackson Library Documentation and Tutorials](https://github.com/FasterXML/jackson-docs)
+
+## External Libraries required
+
+| Library                              |    Version | Reason needed or used       |
+|:-------------------------------------|-----------:|:----------------------------|
+| com.google.guava:guava               | 33.4.0-jre | Caching program settings    |
+| faster.xml.jackson.core:jackson-core |     2.18.3 | convert POJO's to/from JSON |
+faster.jackson.core: jackson-databind |     2.18.3 | convert POJO's to/from JSON  |
+
+
 
