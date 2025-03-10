@@ -3,6 +3,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import java.io.IOException;
+
 public class PersistenceHandler {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -14,6 +16,13 @@ public class PersistenceHandler {
 
         // Enable pretty-printing if desired
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        try {
+            String connectionTemplate = DatabaseHelpers.getConnectionTemplate();
+            System.out.format("Connection template: %s%n", connectionTemplate);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /** Return a JSON string representation of the specified POJO instance.
