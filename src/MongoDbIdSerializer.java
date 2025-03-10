@@ -6,8 +6,9 @@ import org.bson.types.ObjectId;
 import java.io.IOException;
 
 /**
- * A special class to overcome the issue of serialize/deserialize the MongoDB _id field that
- * often comes through as a wierd dictionary containing a timestamp key/value and a date key/value.
+ * A special class to overcome the issue of serializing the MongoDB _id field that,
+ * without this class, would come through as a wierd dictionary containing
+ * a timestamp key/value and a date key/value.
  * This class is designed to overcome that issue.
  * Example usage (e.g., POJO.java):
  * <pre>

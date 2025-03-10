@@ -10,6 +10,7 @@ public class POJO {
 
     /**
      * This property is used by MongoDB to uniquely identify an instance of the record in a collection.
+     * It take a special set of classes to make sure the field is properly serialized/deserialized.
      * @implNote - the value will be null unless the information came from an existing record in a MongoDB
      * Atlas collection.
      */
